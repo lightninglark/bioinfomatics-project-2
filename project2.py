@@ -2,11 +2,11 @@
 Created on May 17, 2017
 
 Project 2: Project 2 ADT analyzes a scikit-learn formatted dataset to create
-           a classification report and confusion matrix. the confusion report
+           a classification report and confusion matrix. the confusion matrix
            is then turned into a matplotlib heatmap.
            
            (This ADT will eventually create a SKL dataset based on EGR-1 gene
-           characteristics and social complexity critera and measurments)
+           characteristics and social complexity criteria and measurements)
 
 Dependencies: scikit-learn, matplotlib
 
@@ -110,11 +110,11 @@ def learningCode():
     print(cr)
     
     """
-    How to interpret a Confusion Matrix: Y acis is actual Classes, X axis is
+    How to interpret a Confusion Matrix: Y axis is actual Classes, X axis is
     classes predicted by the model. In this example, row 0 (top row); (0,0)
     is the number of correctly predicted classes. We have 50 samples in the
     Iris data set, and all 50 samples associated with label 0 were placed in 
-    lable 0, hence (0,0) = 50. If we had 50 samples all which were actually in
+    label 0, hence (0,0) = 50. If we had 50 samples all which were actually in
     label 0, and 25 were correctly predicted to be in label 0, but 10 were 
     predicted to be in label 1 and 15 were predicted to be in label 2 our row 0
     would look like this [25, 10, 15]
@@ -137,7 +137,7 @@ def plotCM(cm):
     documentation on subplots: 
     http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.subplots
     
-    plt.subplots() is a function that returns a tuple (fininte ordered list of
+    plt.subplots() is a function that returns a tuple (finite ordered list of
     elements) of a figure and axes object(s). fig is used for changing figure-
     level objects or save the figure as an image file. Ax is used to modify
     axes objects.
