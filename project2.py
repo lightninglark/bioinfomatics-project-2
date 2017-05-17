@@ -65,9 +65,12 @@ def learningCode():
     #print (dataset)
     
     model = DecisionTreeClassifier()        # Create new DTC object
+    """
+    Fit a Classification and Regression Tree (CART) Model to the dataset.
     
-    #Fit a Classification and Regression Tree (CART) Model to the dataset
-    # this "trains" the model using the dataset in the IRIS data set.
+    DecisionTreeClassifier().fit "trains" the model using the IRIS data set.
+    this method provides functionality to add sample weights as well.
+    """
     model.fit(dataset.data, dataset.target)
     
     # http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier
@@ -83,6 +86,8 @@ def learningCode():
     the DecisionTreeClassifier().predict function predicts class or regression
     value for each for each sample in parameter (parameter is an "array-like"
     or sparse matrix of shape = [n_samples, n_features].
+    
+    it returns a parameter-like array of predicted values
     """
     predicted = model.predict(dataset.data)
     
