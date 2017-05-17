@@ -21,9 +21,42 @@ __maintainer__ = "AUTHOR_NAME"
 __email__ = "AUTHOR_EMAIL"
 __status__ = "homework"
 
-def main():
-    
-    print("More to come.")
-    
+from sklearn import datasets
+from sklearn import metrics
+from sklearn.tree import DecisionTreeClassifier
 
+def main():
+    """ Main Function to control program flow
+    """
+    
+    learningCode()  # Example code, basic regression and classification
+    
+    return
+
+   
+def learningCode():
+    """ This function is temporary as we learn how to use scikit-learn
+        --This function includes a sample dataset provided by scikit-learn
+        --There is an example of a regression and classification here.
+    """ 
+    dataset = datasets.load_iris()          # Load sample iris (flower) dataset
+    
+    model = DecisionTreeClassifier()        # Create new DTC object
+    
+    #Fit a Classification and Regression Tree (CART) Model to the dataset
+    model.fit(dataset.data, dataset.target)
+    print(model)
+    
+    #Predictions
+    expected = dataset.target
+    predicted = model.predict(dataset.data)
+    
+    #Summarize the fit (relationship) of the model
+    print(metrics.classification_report(expected, predicted))     
+    print(metrics.confusion_matrix(predicted, expected))
+    
+    return
+      
+    
 main()
+
