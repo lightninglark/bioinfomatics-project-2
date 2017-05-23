@@ -14,10 +14,10 @@ Assumptions and Implementation Notes:
             -- All dependencies are installed and accessible
 
 
-@authors: Camilo Acosta, Jayse Farrel, Jessica Kunder, Ryan Palm
+@authors: Jayse Farrel, Jessica Kunder, Ryan Palm
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-__author__ = "Camilo Acosta, Jayse Farrel, Jessica Kunder, Ryan Palm"
+__author__ = "Jayse Farrel, Jessica Kunder, Ryan Palm"
 __copyright__ = "COPYRIGHT_INFORMATION"
 __credits__ = ["Camilo Acosta, Jayse Farrel, Jessica Kunder, Ryan Palm"]
 __license__ = "GPL"
