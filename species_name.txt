@@ -1,0 +1,197 @@
+Homo sapiens chromosome 5
+Mus musculus strain C57BL/6J chromosome 18
+Rattus norvegicus strain mixed chromosome 18
+Danio rerio strain Tuebingen chromosome 14
+Taeniopygia guttata isolate Black17 chromosome 13
+Gallus gallus isolate RJF #256 breed Red Jungle fowl
+Bos taurus breed Hereford chromosome 7
+Xenopus laevis strain J chromosome 3L
+Oryctolagus cuniculus breed Thorbecke inbred chromosome 3
+Macaca mulatta isolate 17573 chromosome 6
+Serinus canaria unplaced genomic scaffold
+Canis lupus familiaris breed boxer chromosome 11
+Ovis aries breed Texel chromosome 5
+Sus scrofa isolate TJ Tabasco breed Duroc chromosome 2
+Haplochromis burtoni isolate A. burtoni ID#24_Hofmann unplaced genomic scaffold
+Xenopus tropicalis strain Nigerian chromosome 3
+Felis catus isolate Cinnamon breed Abyssinian chromosome A1
+Pan troglodytes isolate Yerkes chimp pedigree #C0471 (Clint) chromosome 5
+Zonotrichia albicollis isolate Tan morph unplaced genomic scaffold
+Oryzias latipes chromosome 10
+Xenopus laevis strain J chromosome 3S
+Capra hircus breed San Clemente chromosome 7
+Mustela putorius furo isolate ID#1420 breed Sable unplaced genomic scaffold
+Pteropus alecto unplaced genomic scaffold
+Myotis brandtii unplaced genomic scaffold
+Heterocephalus glaber isolate NMR 29 unplaced genomic scaffold
+Ailuropoda melanoleuca unplaced genomic scaffold
+Salmo salar isolate Sally breed double haploid chromosome ssa13
+Ictalurus punctatus breed USDA103 chromosome 8
+Nannospalax galili isolate Female #2095 unplaced genomic scaffold
+Nothobranchius furzeri strain GRZ chromosome sgr01
+Callithrix jacchus chromosome 2
+Phascolarctos cinereus isolate Bilbo 61053 unplaced genomic scaffold
+Boleophthalmus pectinirostris unplaced genomic scaffold
+Odocoileus virginianus texanus isolate animal Pink-7 unplaced genomic scaffold
+Pogona vitticeps unplaced genomic scaffold
+Labrus bergylta unplaced genomic scaffold
+Monopterus albus unplaced genomic scaffold
+Rhincodon typus isolate Ralph unplaced genomic scaffold
+Castor canadensis isolate Ward unplaced genomic scaffold
+Paralichthys olivaceus breed gynogenesis unplaced genomic scaffold
+Bos indicus isolate QUIL7308 breed Nelore chromosome 7
+Hippocampus comes isolate QL1 unplaced genomic scaffold
+Rhinolophus sinicus isolate Zhonghua_01 unplaced genomic scaffold
+Hipposideros armiger isolate ML-2016 unplaced genomic scaffold
+Panthera pardus isolate Maewha unplaced genomic scaffold
+Scleropages formosus breed golden arowana unplaced genomic scaffold
+Nanorana parkeri isolate BGI_ZX_2015 unplaced genomic scaffold
+Rhinopithecus bieti isolate Rb0 unplaced genomic scaffold
+Lepidothrix coronata isolate B3197 unplaced genomic scaffold
+Pygocentrus nattereri isolate Pna-1 unplaced genomic scaffold
+Manis javanica isolate MP_PG03-UM unplaced genomic scaffold
+Cebus capucinus imitator isolate Cc_AM_T3 unplaced genomic scaffold
+Kryptolebias marmoratus isolate JLee-2015 unplaced genomic scaffold
+Miniopterus natalensis isolate MN2012-01 unplaced genomic scaffold
+Rousettus aegyptiacus isolate 1219 unplaced genomic scaffold
+Coturnix japonica isolate 7356 chromosome 13
+Protobothrops mucrosquamatus isolate PMUCROS unplaced genomic scaffold
+Parus major isolate Abel chromosome 13
+Marmota marmota marmota unplaced genomic scaffold
+Cyprinodon variegatus isolate N-32 unplaced genomic scaffold
+Acinonyx jubatus isolate AJU 981 Chewbacca unplaced genomic scaffold
+Poecilia latipinna isolate Pla-1442-1.1 unplaced genomic scaffold
+Poecilia mexicana isolate Pme_1353_1.1 unplaced genomic scaffold
+Calidris pugnax isolate Ruff unplaced genomic scaffold
+Sturnus vulgaris isolate 715 unplaced genomic scaffold
+Equus asinus isolate Maral har breed Guanzhong donkey unplaced genomic scaffold
+Thamnophis sirtalis isolate EDBJR-23777 unplaced genomic scaffold
+Austrofundulus limnaeus strain Quisiro unplaced genomic scaffold
+Apteryx australis mantelli unplaced genomic scaffold
+Anser cygnoides domesticus breed Zhedong unplaced genomic scaffold
+Dipodomys ordii isolate 6190 unplaced genomic scaffold
+Fundulus heteroclitus isolate Maine unplaced genomic scaffold
+Microcebus murinus isolate mixed chromosome 19
+Propithecus coquereli isolate 6110/MARCELLA unplaced genomic scaffold
+Aotus nancymaae isolate 85725 unplaced genomic scaffold
+Cercocebus atys isolate FAK unplaced genomic scaffold
+Mandrillus leucophaeus isolate KB7577 unplaced genomic scaffold
+Colobus angolensis palliatus isolate OR3802 unplaced genomic scaffold
+Macaca nemestrina isolate M95218 unplaced genomic scaffold
+Aquila chrysaetos canadensis isolate GSEH35GE unplaced genomic scaffold
+Pteropus vampyrus isolate Shadow unplaced genomic scaffold
+Camelus dromedarius breed Arabia unplaced genomic scaffold
+Camelus bactrianus breed Alxa unplaced genomic scaffold
+Esox lucius isolate CL-BC-CA-002 linkage group LG04
+Bison bison bison isolate TAMUID 2011002044 unplaced genomic scaffold
+Notothenia coriiceps isolate Sejong01 unplaced genomic scaffold
+Larimichthys crocea isolate SSNF unplaced genomic scaffold
+Fukomys damarensis unplaced genomic scaffold
+Haliaeetus leucocephalus isolate CR32 unplaced genomic scaffold
+Corvus cornix cornix isolate S_Up_H32 unplaced genomic scaffold
+Rhinopithecus roxellana isolate Xiao Hai unplaced genomic scaffold
+Balearica regulorum gibbericeps isolate BGI_N312 unplaced genomic scaffold
+Tinamus guttatus isolate BGI_N309 unplaced genomic scaffold
+Chlamydotis macqueenii isolate BGI_N324 unplaced genomic scaffold
+Nestor notabilis isolate BGI_N333 unplaced genomic scaffold
+Chaetura pelagica isolate M959 unplaced genomic scaffold
+Tyto alba isolate BGI_N341 unplaced genomic scaffold
+Opisthocomus hoazin isolate BGI_N306 unplaced genomic scaffold
+Haliaeetus albicilla isolate BGI_N329 unplaced genomic scaffold
+Picoides pubescens isolate BGI_N307 unplaced genomic scaffold
+Charadrius vociferus isolate BGI_N301 unplaced genomic scaffold
+Apaloderma vittatum isolate BGI_N311 unplaced genomic scaffold
+Struthio camelus australis isolate BGI_N308 unplaced genomic scaffold
+Egretta garzetta isolate BGI_Z169 unplaced genomic scaffold
+Cuculus canorus isolate BGI_N303 unplaced genomic scaffold
+Phalacrocorax carbo isolate BGI_N336 unplaced genomic scaffold
+Pelecanus crispus isolate BGI_N334 unplaced genomic scaffold
+Nipponia nippon isolate BGI_Y956 unplaced genomic scaffold
+Pygoscelis adeliae isolate BGI_AS28 unplaced genomic scaffold
+Aptenodytes forsteri isolate BGI_AS27 unplaced genomic scaffold
+Merops nubicus isolate BGI_N331 unplaced genomic scaffold
+Manacus vitellinus isolate BGI_N305 unplaced genomic scaffold
+Ursus maritimus isolate Baiyulong unplaced genomic scaffold
+Corvus brachyrhynchos isolate BGI_N302 unplaced genomic scaffold
+Galeopterus variegatus unplaced genomic scaffold
+Equus przewalskii isolate Burgud unplaced genomic scaffold
+Calypte anna isolate BGI_N300 unplaced genomic scaffold
+Poecilia reticulata strain Guanapo linkage group LG10
+Cynoglossus semilaevis isolate Cse_v1.0 chromosome 15
+Stegastes partitus isolate 25-593 unplaced genomic scaffold
+Eptesicus fuscus isolate BU_THK_EF1 unplaced genomic scaffold
+Tarsius syrichta isolate Samal-C Ts95f unplaced genomic scaffold
+Chlorocebus sabaeus isolate 1994-021 chromosome 23
+Orycteropus afer afer isolate SDZICR_OR568_19922 unplaced genomic scaffold
+Poecilia formosa unplaced genomic scaffold
+Erinaceus europaeus isolate Erinaceus europaeus_13Jul2011 unplaced genomic scaffold
+Lipotes vexillifer unplaced genomic scaffold
+Astyanax mexicanus unplaced genomic scaffold
+Balaenoptera acutorostrata scammoni unplaced genomic scaffold
+Physeter catodon unplaced genomic scaffold
+Panthera tigris altaica isolate TaeGuk unplaced genomic scaffold
+Chelonia mydas unplaced genomic scaffold
+Peromyscus maniculatus bairdii unplaced genomic scaffold
+Elephantulus edwardii isolate Elephantulus edwardi_28Jun2011 unplaced genomic scaffold
+Chrysochloris asiatica unplaced genomic scaffold
+Myotis davidii unplaced genomic scaffold
+Leptonychotes weddellii isolate WS11-02 unplaced genomic scaffold
+Lepisosteus oculatus isolate Spotted Gar 1 linkage group LG6
+Alligator mississippiensis isolate KSC_2009_1 unplaced genomic scaffold
+Vicugna pacos isolate Carlotta (AHFN-0088) unplaced genomic scaffold
+Camelus ferus isolate Naran unplaced genomic scaffold
+Tupaia chinensis unplaced genomic scaffold
+Pelodiscus sinensis isolate Daiwa-1 unplaced genomic scaffold
+Myotis lucifugus unplaced genomic scaffold
+Bubalus bubalis breed Mediterranean unplaced genomic scaffold
+Latimeria chalumnae isolate SAIAB 97564 unplaced genomic scaffold
+Pantholops hodgsonii unplaced genomic scaffold
+Bos mutus isolate yakQH1 unplaced genomic scaffold
+Xiphophorus maculatus strain JP 163 A isolate XMAC-090115_JP163A unplaced genomic scaffold
+Pundamilia nyererei isolate P.nyererei 1_Seehausen unplaced genomic scaffold
+Macaca fascicularis chromosome 6
+Pseudopodoces humilis unplaced genomic scaffold
+Columba livia breed Danish Tumbler unplaced genomic scaffold
+Falco cherrug unplaced genomic scaffold
+Geospiza fortis unplaced genomic scaffold
+Chinchilla lanigera isolate Chin_1 unplaced genomic scaffold
+Microtus ochrogaster isolate Prairie Vole_2 chromosome 18
+Ictidomys tridecemlineatus isolate #75 unplaced genomic scaffold
+Chrysemys picta bellii isolate RCT428 unplaced genomic scaffold
+Falco peregrinus unplaced genomic scaffold
+Mesocricetus auratus isolate Golden Hamster female 1 unplaced genomic scaffold
+Ficedula albicollis isolate OC2 unplaced genomic scaffold
+Anas platyrhynchos breed Pekin duck unplaced genomic scaffold
+Echinops telfairi isolate 266 unplaced genomic scaffold
+Condylura cristata isolate star-nosed mole 26May11 unplaced genomic scaffold
+Jaculus jaculus isolate JJ0015 unplaced genomic scaffold
+Octodon degus isolate 3935 unplaced genomic scaffold
+Sorex araneus isolate GB8-d unplaced genomic scaffold
+Ochotona princeps isolate Ochotona princeps_07Jul2011 unplaced genomic scaffold
+Maylandia zebra isolate #2_Kocher and #3_Kocher ecotype Mazinzi reef unplaced genomic scaffold
+Dasypus novemcinctus isolate 3-136 unplaced genomic scaffold
+Odobenus rosmarus divergens isolate Ivan unplaced genomic scaffold
+Tursiops truncatus isolate MMES2002162SC unplaced genomic scaffold
+Orcinus orca isolate Morgan unplaced genomic scaffold
+Gorilla gorilla gorilla chromosome 5
+Takifugu rubripes chromosome 14
+Saimiri boliviensis boliviensis isolate 3227 unplaced genomic scaffold
+Papio anubis isolate 1X1155 chromosome 6
+Pan paniscus isolate Ulindi chromosome 5
+Otolemur garnettii isolate 467f Iridium unplaced genomic scaffold
+Sarcophilus harrisii isolate Salem chromosome 1 unlocalized genomic scaffold
+Cricetulus griseus unplaced genomic scaffold
+Cavia porcellus strain inbred line 2N unplaced genomic scaffold
+Oreochromis niloticus isolate F11D_XX linkage group LG2
+Loxodonta africana isolate ISIS603380 unplaced genomic scaffold
+Monodelphis domestica chromosome 1
+Nomascus leucogenys isolate Asia; international studbook 0098 chromosome 2
+Anolis carolinensis chromosome 2
+Meleagris gallopavo isolate NT-WF06-2002-E0010 breed Aviagen turkey brand Nicholas breeding stock chromosome 15
+Pongo abelii isolate ISIS 71 chromosome 5
+Equus caballus isolate Twilight breed thoroughbred chromosome 14
+Mus pahari chromosome 15
+Python bivittatus unplaced genomic scaffold
+Melopsittacus undulatus unplaced genomic scaffold
+Ceratotherium simum simum isolate SDZICR_KB13650 unplaced genomic scaffold
+Trichechus manatus latirostris isolate Lorelei unplaced genomic scaffold
