@@ -14,7 +14,7 @@ __email__ = "AUTHOR_EMAIL"
 __status__ = "homework"
 
 baseURL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
-#https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=gene&id=2099&retmode=xml
+searchTerms = ["chromosome", "unplaced", "isolate", "strain", "breed"]
 baseURL2 = "https://ncbi.nlm.nih.gov"
 Tag = "{http://www.w3.org/1999/xhtml}"
 divID = "viewercontent1"
@@ -84,7 +84,6 @@ def FetchURL(id=None):
     return None
 
 def FetchFASTA(urls=None):
-    print('entered')
     for url in urls:
         #extracts the nucleotid id, the start point, and the end point from the given url
         id = find_between(url, '/nuccore/', '?')
@@ -98,13 +97,13 @@ def FetchFASTA(urls=None):
         seq_start=start, seq_stop=end, rettype='fasta', tetmode='text')
 
         #combines lines into a single string, extracts name and condenses opening tag
-        content = ""
-        name = ''
+        content = name = ""
         i = False
+
         for temp in fetch:
             if i == False:
-                content += '> ' + find_between(temp, ' ', ',') + '\n'
-                name = find_between(temp, ' ', ',')
+                name = stripLine(find_between(temp, ' ', ','))
+                content += '> ' + name + '|' + find_between(temp, ' ', ',') + '\n'
                 i = True
             else:
                 content += temp;
@@ -119,4 +118,14 @@ def find_between(s, first, last):
         return s[start:end]
     except ValueError:
         return None
+
+def stripLine(line):
+    for term in searchTerms:
+        try:
+            startPoint = line.index(term)
+            line = line[0:startPoint]
+        except ValueError:
+            None
+    return line
+
 main()
