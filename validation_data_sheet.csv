@@ -1,0 +1,8 @@
+,Monogamous,Polygynous,Polyandrous,Promiscuous,Solitary,Small_units,Communal,Parental_investment,Caste_system,Gene_length
+Canis_familiaris,0,0,0,1,0,1,1,1,1,3842
+Bos_taurus,0,1,0,0,0,1,1,1,1,2844
+Equus_caballus,0,1,0,0,0,1,1,1,1,3833
+Anolis_carolinensis,0,1,0,0,1,0,0,0,0,2155
+Salmo_salar,0,0,1,0,0,0,1,0,0,932
+Bison_bison,0,1,0,0,0.3,1,0.5,1,1,3952
+Nestor_notabilis,0,1,0,0,0,1,0.5,1,1,1815
