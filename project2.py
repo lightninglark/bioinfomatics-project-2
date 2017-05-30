@@ -1,4 +1,5 @@
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+from nltk.classify import scikitlearn
 Created on May 17, 2017
 
 Project 2: Project 2 ADT analyzes a scikit-learn formatted dataset to create
@@ -30,7 +31,7 @@ from sklearn import datasets
 from sklearn import metrics
 from sklearn.tree import DecisionTreeClassifier
 import matplotlib.pyplot as plt
-import pandas
+import pandas as pd
 
 
 
@@ -38,22 +39,21 @@ def main():
     """ Main Function to control program flow
     """
 
-    #learningCode()  #  Example code, basic regression and classification
+    learningCode()  #  Example code, basic regression and classification
     
-    initDataSets()
+    #initDataSets()
 
 
     return
 
 
 def initDataSets():
-    trainData = pandas.read_csv("training_data_sheet.csv")
-    validData = pandas.read_csv('validation_data_sheet.csv')
-    dataset = datasets.load_iris()
     
-    print(trainData)
-    print(validData)
-    print(dataset)
+    
+    return
+#     print(trainData)
+#     print(validData)
+#     print(dataset)
     
     
 
@@ -78,8 +78,16 @@ def learningCode():
     """
     
     dataset = datasets.load_iris()          #  Load sample iris (flower) dataset
+    
+    tData = pd.DataFrame.from_csv('training_data_sheet.csv')
+    vData = pd.DataFrame.from_csv('validation_data_sheet.csv')
+    
+    vDataMatrix = vData.as_matrix()
+    tDataMatrix = tData.as_matrix()
+    
+    print(tDataMatrix)
 
-    #  print (dataset)
+    print (dataset.target)
 
     model = DecisionTreeClassifier()        #  Create new DTC object
     """
