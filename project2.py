@@ -36,7 +36,7 @@ def main():
     """ Main Function to control program flow
     """
 
-    learningCode()  # Example code, basic regression and classification
+    learningCode()  #  Example code, basic regression and classification
 
     return
 
@@ -60,11 +60,12 @@ def learningCode():
     respective label(target), and in this data set, there is a list with 4
     measurements: Sepal length, Sepal width, Petal length, and Petal width.
     """
-    dataset = datasets.load_iris()          # Load sample iris (flower) dataset
+    
+    dataset = datasets.load_iris()          #  Load sample iris (flower) dataset
 
-    #print (dataset)
+    #  print (dataset)
 
-    model = DecisionTreeClassifier()        # Create new DTC object
+    model = DecisionTreeClassifier()        #  Create new DTC object
     """
     Fit a Classification and Regression Tree (CART) Model to the dataset.
 
@@ -73,13 +74,13 @@ def learningCode():
     """
     model.fit(dataset.data, dataset.target)
 
-    # http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier
-    # To assist in reading the DTC output
+    #  http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier
+    #  To assist in reading the DTC output
     print(model)
     print()
 
-    #Predictions
-    expected = dataset.target #assign target (label) array to expected
+    #  Predictions
+    expected = dataset.target # assign target (label) array to expected
     """
     http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier.predict
 
@@ -91,7 +92,7 @@ def learningCode():
     """
     predicted = model.predict(dataset.data)
 
-    #Summarize the fit (relationship) of the model
+    #  Summarize the fit (relationship) of the model
     """
     How to interpret a Classification report:
 
@@ -123,7 +124,7 @@ def learningCode():
     """
     cm = metrics.confusion_matrix(predicted, expected)
     print(cm)
-    plotCM(cm) # Plot the confusion matrix as a heat map
+    plotCM(cm) #  Plot the confusion matrix as a heat map
 
     return
 
@@ -131,7 +132,7 @@ def plotCM(cm):
     """This method plots our confusion matrix as a heatmap with matplotlib
     """
 
-    labels = ['class 0', 'class 1', 'class 2'] # Labels for heatmap
+    labels = ['class 0', 'class 1', 'class 2'] #  Labels for heatmap
 
     """
     documentation on subplots:
@@ -144,10 +145,10 @@ def plotCM(cm):
     """
     fig, ax = plt.subplots()
 
-    #the matshow function returns a color matrix based on the data set
+    # the matshow function returns a color matrix based on the data set
     h = ax.matshow(cm)
 
-    #the colorbar function converts a color matrix into a image
+    # the colorbar function converts a color matrix into a image
     fig.colorbar(h)
 
     # Add labels to graph axes
@@ -156,7 +157,7 @@ def plotCM(cm):
     ax.set_xlabel('Predicted')
     ax.set_ylabel('Truth')
 
-    #display the heat map
+    # display the heat map
     plt.show()
 
     return
