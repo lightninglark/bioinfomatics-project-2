@@ -1,5 +1,6 @@
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 from nltk.classify import scikitlearn
+from statsmodels.sandbox.tsa.try_var_convolve import yvalid
 Created on May 17, 2017
 
 Project 2: Project 2 ADT analyzes a scikit-learn formatted dataset to create
@@ -38,8 +39,23 @@ import pandas as pd
 def main():
     """ Main Function to control program flow
     """
+    tData = pd.read_csv('training_data_sheet.csv', index_col = 0)
+    vData = pd.read_csv('validation_data_sheet.csv', index_col = 0)
 
-    learningCode()  #  Example code, basic regression and classification
+#     modTrainData = modDataSet(tData)
+#     modvData = modDataSet(vData)
+    
+    x_Train = getFeaturesList(tData)
+    x_Valid = getFeaturesList(vData)
+    
+    y_Train = getTargetsList(tData)
+    y_Valid = getTargetsList(vData)
+    
+    analyzeData(x_Train, y_Train, x_Valid, y_Valid, tData, vData)
+    
+    
+    #learningCode()  #  Example code, basic regression and classification
+    
     
     #initDataSets()
 
@@ -47,14 +63,50 @@ def main():
     return
 
 
-def initDataSets():
+def getFeaturesList(df):
     
+    return list(df.columns[2:10])
+
+def getTargetsList(df):
     
+    return df['Species'].unique()
+
+
+def analyzeData(x_Train, y_Train, x_Valid, y_Valid, dfTrain, dfValid):
+    
+    #x and y parameters for fitting and prediction
+    xT = dfTrain[x_Train]
+    yT = dfTrain["Gene_length"]
+    
+    xV = dfValid[x_Valid]
+    yV = dfValid["Gene_length"]
+    
+    # Classifcation model
+    model = DecisionTreeClassifier()
+    
+    # Train model with training data set
+    model.fit(xT,yT)
+    
+    print(model)
+    print()
+    
+    # expected (actual gene lengths)
+    expected = yV
+    # predict gene lengths based on features of valid set
+    predicted = model.predict(xV)
+    
+    #print classification report
+    cr = metrics.classification_report(expected, predicted)
+    print(cr)
+    
+    #print confusion matrix
+    cm = metrics.confusion_matrix(predicted, expected)
+    print(cm)
+    
+    #Plot confusion matrix
+    plotCM(cm, y_Valid) #  Plot the confusion matrix as a heat map
+
     return
-#     print(trainData)
-#     print(validData)
-#     print(dataset)
-    
     
 
 def learningCode():
@@ -77,17 +129,7 @@ def learningCode():
     measurements: Sepal length, Sepal width, Petal length, and Petal width.
     """
     
-    dataset = datasets.load_iris()          #  Load sample iris (flower) dataset
-    
-    tData = pd.DataFrame.from_csv('training_data_sheet.csv')
-    vData = pd.DataFrame.from_csv('validation_data_sheet.csv')
-    
-    vDataMatrix = vData.as_matrix()
-    tDataMatrix = tData.as_matrix()
-    
-    print(tDataMatrix)
-
-    print (dataset.target)
+    dataset = datasets.load_iris()
 
     model = DecisionTreeClassifier()        #  Create new DTC object
     """
@@ -96,15 +138,19 @@ def learningCode():
     DecisionTreeClassifier().fit "trains" the model using the IRIS data set.
     this method provides functionality to add sample weights as well.
     """
-    model.fit(dataset.data, dataset.target)
-
+    y = dataset.target
+    x = dataset.data
+    
+    #model.fit(dataset.data, dataset.target)
+    model.fit(x,y)
+    
     #  http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier
     #  To assist in reading the DTC output
     print(model)
     print()
 
     #  Predictions
-    expected = dataset.target # assign target (label) array to expected
+    expected = y # assign target (label) array to expected
     """
     http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier.predict
 
@@ -114,7 +160,7 @@ def learningCode():
 
     it returns a parameter-like array of predicted values
     """
-    predicted = model.predict(dataset.data)
+    predicted = model.predict(x)
 
     #  Summarize the fit (relationship) of the model
     """
@@ -152,11 +198,11 @@ def learningCode():
 
     return
 
-def plotCM(cm):
+def plotCM(cm, labels):
     """This method plots our confusion matrix as a heatmap with matplotlib
     """
 
-    labels = ['class 0', 'class 1', 'class 2'] #  Labels for heatmap
+    #labels = ['class 0', 'class 1', 'class 2'] #  Labels for heatmap
 
     """
     documentation on subplots:
