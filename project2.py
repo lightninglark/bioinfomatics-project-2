@@ -30,16 +30,32 @@ from sklearn import datasets
 from sklearn import metrics
 from sklearn.tree import DecisionTreeClassifier
 import matplotlib.pyplot as plt
+import pandas
+
 
 
 def main():
     """ Main Function to control program flow
     """
 
-    learningCode()  #  Example code, basic regression and classification
+    #learningCode()  #  Example code, basic regression and classification
+    
+    initDataSets()
+
 
     return
 
+
+def initDataSets():
+    trainData = pandas.read_csv("training_data_sheet.csv")
+    validData = pandas.read_csv('validation_data_sheet.csv')
+    dataset = datasets.load_iris()
+    
+    print(trainData)
+    print(validData)
+    print(dataset)
+    
+    
 
 def learningCode():
     """ This function is temporary as we learn how to use scikit-learn
