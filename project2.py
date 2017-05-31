@@ -30,7 +30,7 @@ __status__ = "homework"
 
 from sklearn import datasets
 from sklearn import metrics
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeRegressor
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -40,6 +40,7 @@ def main():
     """ Main Function to control program flow
     """
     tData = pd.read_csv('training_data_sheet.csv', index_col = 0)
+    #vData = pd.read_csv('full_data.csv', index_col = 0)
     vData = pd.read_csv('validation_data_sheet.csv', index_col = 0)
 
 #     modTrainData = modDataSet(tData)
@@ -62,6 +63,9 @@ def main():
 
     return
 
+def visualizeData(df):
+    
+    return
 
 def getFeaturesList(df):
     
@@ -70,7 +74,6 @@ def getFeaturesList(df):
 def getTargetsList(df):
     
     return df['Gene_length'].unique()
-
 
 def analyzeData(x_Train, y_Train, x_Valid, y_Valid, dfTrain, dfValid):
     
@@ -81,11 +84,10 @@ def analyzeData(x_Train, y_Train, x_Valid, y_Valid, dfTrain, dfValid):
     xV = dfValid[x_Valid]
     yV = dfValid["Gene_length"]
     
-    print(x_Train)
-    print(y_Train)
+ 
     
     # Classifcation model
-    model = DecisionTreeClassifier()
+    model = DecisionTreeRegressor()
     
     # Train model with training data set
     model.fit(xT,yT)
@@ -98,29 +100,71 @@ def analyzeData(x_Train, y_Train, x_Valid, y_Valid, dfTrain, dfValid):
     # predict gene lengths based on features of valid set
     predicted = model.predict(xV)
     
-    #print classification report
-    cr = metrics.classification_report(expected, predicted)
-    print(cr)
+    #Explained Variance Score
     
-    #print confusion matrix
-    cm = metrics.confusion_matrix(predicted, expected)
-    print(cm)
+    expVariScore = metrics.explained_variance_score(expected, predicted)
     
+    print('Explained Variance Score')
+    print(expVariScore)
+    print()
     
-    # convert gene lengths from ints to strings
-    labels = y_Valid
-    strLabels = []
+    #mean absolute error
     
-    for n in range(0, len(labels)):
-        tempStr = str(labels[n])
-        strLabels.append(tempStr)
+    mAbsError = metrics.mean_absolute_error(expected, predicted)
+    print('Mean Absolute Error')
+    print(mAbsError)
+    print()
     
+    #mean squared error
+    mSqrError = metrics.mean_squared_error(expected, predicted)
+    print('Mean Squared Error')
+    print(mSqrError)
+    print()
     
-    #Plot confusion matrix
-    plotCM(cm, strLabels) #  Plot the confusion matrix as a heat map
+    #median_absolute_erro
+    medAbsError = metrics.median_absolute_error(expected, predicted)
+    print('Median Absolute Error')
+    print(medAbsError)
+    print()
+    
+    #r2 score
+    r2Score = metrics.r2_score(expected, predicted)
+    print('r2 Score')
+    print(r2Score)
+    print()
+
+
+    #plot regression
+    plotDTR(model)
+    
+#     cr = metrics.classification_report(expected, predicted)
+#     print(cr)
+#     
+#     #print confusion matrix
+#     cm = metrics.confusion_matrix(predicted, expected)
+#     print(cm)
+#     
+#     
+#     # convert gene lengths from ints to strings
+#     labels = y_Valid
+#     strLabels = []
+#     
+#     for n in range(0, len(labels)):
+#         tempStr = str(labels[n])
+#         strLabels.append(tempStr)
+#     
+#     
+#     #Plot confusion matrix
+#     plotCM(cm, strLabels) #  Plot the confusion matrix as a heat map
 
     return
     
+
+def plotDTR(model):
+    
+    #implement plot
+    
+    return
 
 def learningCode():
     """ This function is temporary as we learn how to use scikit-learn
