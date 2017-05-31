@@ -1,6 +1,9 @@
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 from nltk.classify import scikitlearn
 from statsmodels.sandbox.tsa.try_var_convolve import yvalid
+from pandas.tools.plotting import scatter_matrix
+from sklearn.metrics.pairwise import pairwise_distances_argmin
+from sklearn.metrics.pairwise import pairwise_distances_argmin_min
 Created on May 17, 2017
 
 Project 2: Project 2 ADT analyzes a scikit-learn formatted dataset to create
@@ -28,55 +31,112 @@ __maintainer__ = "AUTHOR_NAME"
 __email__ = "AUTHOR_EMAIL"
 __status__ = "homework"
 
-from sklearn import datasets
 from sklearn import metrics
 from sklearn.tree import DecisionTreeRegressor
+from sklearn import cluster
 import matplotlib.pyplot as plt
 import pandas as pd
+import statsmodels.api as sm
+import numpy as np
 
 
 
 def main():
     """ Main Function to control program flow
     """
-    tData = pd.read_csv('training_data_sheet.csv', index_col = 0)
-    #vData = pd.read_csv('full_data.csv', index_col = 0)
-    vData = pd.read_csv('validation_data_sheet.csv', index_col = 0)
+    tData = pd.read_csv('training_data.csv', index_col = 0)  # Training data
+    vData = pd.read_csv('validation_data.csv', index_col = 0)# Validation data
+    fData = pd.read_csv('full_data.csv', index_col = 0)      # Full data
 
-#     modTrainData = modDataSet(tData)
-#     modvData = modDataSet(vData)
+    # Grab features list and gene lengths for use in analysis/plots
+    x_Full = getFeaturesList(fData)
+    y_Full = getTargetsList(fData)
 
     x_Train = getFeaturesList(tData)
     x_Valid = getFeaturesList(vData)
 
     y_Train = getTargetsList(tData)
     y_Valid = getTargetsList(vData)
-
-    analyzeData(x_Train, y_Train, x_Valid, y_Valid, tData, vData)
-
-
-    #learningCode()  #  Example code, basic regression and classification
-
-
-    #initDataSets()
-
+    
+    # Plot our dataset (feature, genelength) (x,y)
+    visualizeData(fData)
+    
+    #Run our DTR analysis, generate scatter plot (predicted, expected) (x,y)
+    decisionTreeRegression(x_Train, y_Train, x_Valid, y_Valid, tData, vData)
+    
+    #Have not been able to plot yet
+    clusterAnalysis(fData)
 
     return
 
 def visualizeData(df):
+    '''
+    This function prints out scatter plots of all 'features' by gene length and saves them to the drive.
+    '''
+    x_Features = getFeaturesList(df)
+    y_GeneLength =  getTargetsList(df)
+    
+    gl = 'Gene_length'
+    
+    for n in range(0, 8):
+        
+        plt.figure(figsize = (4,3))
+        
+        plt.scatter(df[x_Features[n]], df[gl], marker = 'o', color = 'green', alpha = 0.7, s = 50, label = x_Features[n])
+        
+        plt.legend()
+        
+        plt.savefig(x_Features[n] + '.png')
+        
 
     return
 
 def getFeaturesList(df):
-
+    '''
+    This function returns a list of the 'features' (like Monogmous, Solitary, etc.)
+    '''
     return list(df.columns[1:10])
 
 def getTargetsList(df):
-
+    '''
+    This function returns a list of all gene lengths.
+    '''
     return df['Gene_length'].unique()
 
-def analyzeData(x_Train, y_Train, x_Valid, y_Valid, dfTrain, dfValid):
+def clusterAnalysis(df):
 
+    
+    
+    x_Features = getFeaturesList(df)
+    y_GeneLength =  getTargetsList(df)
+    
+    y = df['Gene_length']
+    y.values.reshape(-1,1)
+    
+    X = df[x_Features]
+    
+    kmeans = cluster.KMeans(n_clusters=7)
+    kmeans.fit(X, y)
+    
+    centroids = kmeans.cluster_centers_
+    labels = kmeans.labels_
+    
+    print(centroids)
+    print()
+    print(labels)
+    print()
+    print(kmeans)
+    print()
+    
+
+    return
+
+def decisionTreeRegression(x_Train, y_Train, x_Valid, y_Valid, dfTrain, dfValid):
+    '''
+    This function performs a supervised learning classification analysis using
+    a decision tree regressor. It also prints applicable metrics
+    '''
+    
     #x and y parameters for fitting and prediction
     xT = dfTrain[x_Train]
     yT = dfTrain["Gene_length"]
@@ -86,7 +146,7 @@ def analyzeData(x_Train, y_Train, x_Valid, y_Valid, dfTrain, dfValid):
 
 
 
-    # Classifcation model
+    # Regressor model
     model = DecisionTreeRegressor()
 
     # Train model with training data set
@@ -133,20 +193,48 @@ def analyzeData(x_Train, y_Train, x_Valid, y_Valid, dfTrain, dfValid):
     print(r2Score)
     print()
 
+    
+    
+    # Genrate stats summary (linear regression)
+    statistics(expected, predicted)
+    
+    # Generate scatter plot
     plotDTR(expected, predicted)
+    
     return
 
+def statistics(expected,predicted):
+    '''
+    This method runs a linear regression (OLS: least squared) on the 
+    predicted (Y) vs true (X) gene lengths.
+    '''
+    
+    results = sm.OLS(predicted, sm.add_constant(expected)).fit()
+    
+    print(results.summary())
+    
+    return
 
 def plotDTR(expected, predicted):
+    '''
+    This function plots the results from our DTR analysis as a scatter plot.
+    '''
     plt.figure()
-    plt.plot(expected, predicted, color="red")
+    plt.scatter(expected,predicted, c= "darkorange", label = "Gene Length"  )
+    
+    #Add line of best fit
+    plt.plot(np.unique(expected), np.poly1d(np.polyfit(expected, predicted, 1))(np.unique(expected)))
+    
+    
     plt.xlabel("Truth")
     plt.ylabel("Prediction")
     plt.title("Decision Tree Regression")
-    plt.show()
+    plt.legend()
+    
+    plt.savefig('DTR_scatter.png')
 
     return
-
+'''
 def learningCode():
     """ This function is temporary as we learn how to use scikit-learn
         --This function includes a sample dataset provided by scikit-learn
@@ -269,5 +357,6 @@ def plotCM(cm, labels):
     plt.show()
 
     return
+'''
 
 main()

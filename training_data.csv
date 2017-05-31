@@ -1,0 +1,41 @@
+,Species,Monogamous,Polygynous,Polyandrous,Promiscuous,Solitary,Small_units,Communal,Parental_investment,Caste_system,Gene_length
+0,Pan_troglodytes,0,0.3,0,1,0,1,1,1,1,3827
+1,Mus_musculus,0,1,0,0,1,0.4,0,1,1,3750
+2,Heterocephalus_glaber,0,0,1,0,0,0,1,1,1,3821
+3,Oryctolagus_cuniculus,0,0,0,1,0,1,1,1,1,3873
+4,Ailuropoda_melanoleuca,0,0,1,0,1,0,0,1,0,3742
+5,Gallus_gallus,0,1,0,0,0,1,0,1,1,2803
+6,Danio_rerio,0,0,0,1,0,0,1,0,1,2241
+7,Salmo_salar,0,0,1,0,0,0,1,0,0,932
+8,Mustela_putorius_furo,0,1,0,0,0,1,0,1,1,3596
+9,Phascolarctos_cinereus,0,1,0,0,1,0.5,0,1,1,2601
+10,Rhincodon_typus,0,0,0,1,1,0,0.1,0,0,4680
+11,Bison_bison,0,1,0,0,0.3,1,0.5,1,1,3952
+12,Callithrix jacchus,0,0,1,0,0,1,0,1,0,3830
+13,Cebus capucinus,0,0,0,1,0,1,1,1,1,3870
+14,Manis javanica,0,1,0,0,1,0.1,0,1,0,3860
+15,Rousettus aegyptiacus,0,0,0,1,0,0.5,1,1,0,4115
+16,Marmota marmota,1,0,0,0,0,1,0,1,0,3708
+17,Thamnophis sirtalis,0,0,0,1,1,0,0,0,0,3299
+18,Propithecus coquereli,0,0,1,0,0,1,0,1,1,3811
+19,Macaca nemestrina,0,0,0,1,0.2,1,0,1,1,3827
+20,Esox lucius,0,0,0,1,1,0,0,0,0,4139
+21,Tyto alba,1,0,0,0,1,0,0,1,0,1823
+22,Ursus maritimus,0,1,0,0,1,0,0,1,0,3553
+23,Physeter catodon,0,1,0,0,0,1,1,1,1,3789
+24,Myotis lucifugus,0,0,0,1,0,0,1,1,0,3812
+25,Bubalus bubalis,0,1,0,0,0,1,0.5,1,0,3827
+26,Latimeria chalumnae,1,0,0,0,1,0,0,1,0,3602
+27,Columba livia,1,0,0,0,0,1,0.5,1,0,2592
+28,Orcinus orca,0,0,0,1,0,1,0,1,0,3789
+29,Otolemur garnettii,0,0,0,1,1,0.5,0,1,0,3812
+30,Meleagris gallopavo,0,1,0,0,0,1,1,1,1,2852
+31,Sus scrofa,0,1,0,0,0.5,0.5,0,1,0,4474
+32,Zonotrichia albicollis,0.9,0.1,0,0,0,1,0,1,0,3172
+33,Capra hircus,0,1,0,0,0,0,1,1,1,3837
+34,Castor canadensis,1,0,0,0,0,1,0,1,1,3058
+35,Panthera pardus,0,0,0,1,1,0,0,1,0,3813
+36,Acinonyx jubatus,0,0.5,0,0.5,1,0,0,1,0,3777
+37,Sturnus vulgaris,1,0,0,0,0,0,1,1,0,3105
+38,Corvus brachyrhynchos,1,0,0,1,0,0,1,1,1,2448
+39,Erinaceus europaeus,0,0,0,1,1,0,0,1,0,3118

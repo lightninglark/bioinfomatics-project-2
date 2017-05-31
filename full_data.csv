@@ -25,3 +25,37 @@
 23,Bison_bison,0,1,0,0,0.3,1,0.5,1,1,3952
 24,Haliaeetus_leucocephalus,1,0,0,0,1,0.2,0.4,1,0,1601
 25,Nestor_notabilis,0,1,0,0,0,1,0.5,1,1,1815
+26,Callithrix jacchus,0,0,1,0,0,1,0,1,0,3830
+27,Cebus capucinus,0,0,0,1,0,1,1,1,1,3870
+28,Manis javanica,0,1,0,0,1,0.1,0,1,0,3860
+29,Rousettus aegyptiacus,0,0,0,1,0,0.5,1,1,0,4115
+30,Marmota marmota,1,0,0,0,0,1,0,1,0,3708
+31,Thamnophis sirtalis,0,0,0,1,1,0,0,0,0,3299
+32,Microcebus murinus,0,1,0,0,1,1,0,1,1,3842
+33,Propithecus coquereli,0,0,1,0,0,1,0,1,1,3811
+34,Macaca nemestrina,0,0,0,1,0.2,1,0,1,1,3827
+35,Esox lucius,0,0,0,1,1,0,0,0,0,4139
+36,Tyto alba,1,0,0,0,1,0,0,1,0,1823
+37,Ursus maritimus,0,1,0,0,1,0,0,1,0,3553
+38,Physeter catodon,0,1,0,0,0,1,1,1,1,3789
+39,Myotis lucifugus,0,0,0,1,0,0,1,1,0,3812
+40,Bubalus bubalis,0,1,0,0,0,1,0.5,1,0,3827
+41,Latimeria chalumnae,1,0,0,0,1,0,0,1,0,3602
+42,Columba livia,1,0,0,0,0,1,0.5,1,0,2592
+43,Jaculus jaculus,0,1,0,0,1,0,0,1,0,3130
+44,Octodon degus,0,1,0,0,0,1,0,1,0,3066
+45,Orcinus orca,0,0,0,1,0,1,0,1,0,3789
+46,Otolemur garnettii,0,0,0,1,1,0.5,0,1,0,3812
+47,Pongo abelii,0,0,0,1,1,0.5,0,1,0,4344
+48,Meleagris gallopavo,0,1,0,0,0,1,1,1,1,2852
+49,Sus scrofa,0,1,0,0,0.5,0.5,0,1,0,4474
+50,Zonotrichia albicollis,0.9,0.1,0,0,0,1,0,1,0,3172
+51,Capra hircus,0,1,0,0,0,0,1,1,1,3837
+52,Castor canadensis,1,0,0,0,0,1,0,1,1,3058
+53,Panthera pardus,0,0,0,1,1,0,0,1,0,3813
+54,Acinonyx jubatus,0,0.5,0,0.5,1,0,0,1,0,3777
+55,Sturnus vulgaris,1,0,0,0,0,0,1,1,0,3105
+56,Camelus dromedarius,0,1,0,0,0,0,1,1,1,3311
+57,Corvus brachyrhynchos,1,0,0,1,0,0,1,1,1,2448
+58,Eptesicus fuscus,0,1,0,0,0,0,1,1,1,3049
+59,Erinaceus europaeus,0,0,0,1,1,0,0,1,0,3118
