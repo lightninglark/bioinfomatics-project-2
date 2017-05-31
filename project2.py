@@ -65,11 +65,11 @@ def main():
 
 def getFeaturesList(df):
     
-    return list(df.columns[2:10])
+    return list(df.columns[1:10])
 
 def getTargetsList(df):
     
-    return df['Species'].unique()
+    return df['Gene_length'].unique()
 
 
 def analyzeData(x_Train, y_Train, x_Valid, y_Valid, dfTrain, dfValid):
@@ -80,6 +80,9 @@ def analyzeData(x_Train, y_Train, x_Valid, y_Valid, dfTrain, dfValid):
     
     xV = dfValid[x_Valid]
     yV = dfValid["Gene_length"]
+    
+    print(x_Train)
+    print(y_Train)
     
     # Classifcation model
     model = DecisionTreeClassifier()
@@ -103,8 +106,18 @@ def analyzeData(x_Train, y_Train, x_Valid, y_Valid, dfTrain, dfValid):
     cm = metrics.confusion_matrix(predicted, expected)
     print(cm)
     
+    
+    # convert gene lengths from ints to strings
+    labels = y_Valid
+    strLabels = []
+    
+    for n in range(0, len(labels)):
+        tempStr = str(labels[n])
+        strLabels.append(tempStr)
+    
+    
     #Plot confusion matrix
-    plotCM(cm, y_Valid) #  Plot the confusion matrix as a heat map
+    plotCM(cm, strLabels) #  Plot the confusion matrix as a heat map
 
     return
     
