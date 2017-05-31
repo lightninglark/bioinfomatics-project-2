@@ -78,7 +78,7 @@ def visualizeData(df):
     
     gl = 'Gene_length'
     
-    for n in range(0, 8):
+    for n in range(0, 9):
         
         plt.figure(figsize = (4,3))
         
