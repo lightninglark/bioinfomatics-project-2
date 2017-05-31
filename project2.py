@@ -57,13 +57,13 @@ def main():
 
     y_Train = getTargetsList(tData)
     y_Valid = getTargetsList(vData)
-    
+
     # Plot our dataset (feature, genelength) (x,y)
     visualizeData(fData)
-    
+
     #Run our DTR analysis, generate scatter plot (predicted, expected) (x,y)
     decisionTreeRegression(x_Train, y_Train, x_Valid, y_Valid, tData, vData)
-    
+
     #Have not been able to plot yet
     clusterAnalysis(fData)
 
@@ -75,19 +75,19 @@ def visualizeData(df):
     '''
     x_Features = getFeaturesList(df)
     y_GeneLength =  getTargetsList(df)
-    
+
     gl = 'Gene_length'
-    
+
     for n in range(0, 9):
-        
+
         plt.figure(figsize = (4,3))
-        
+
         plt.scatter(df[x_Features[n]], df[gl], marker = 'o', color = 'green', alpha = 0.7, s = 50, label = x_Features[n])
-        
+
         plt.legend()
-        
-        plt.savefig(x_Features[n] + '.png')
-        
+
+        plt.savefig('images\\' + x_Features[n] + '.png')
+
 
     return
 
@@ -105,29 +105,29 @@ def getTargetsList(df):
 
 def clusterAnalysis(df):
 
-    
-    
+
+
     x_Features = getFeaturesList(df)
     y_GeneLength =  getTargetsList(df)
-    
+
     y = df['Gene_length']
     y.values.reshape(-1,1)
-    
+
     X = df[x_Features]
-    
+
     kmeans = cluster.KMeans(n_clusters=7)
     kmeans.fit(X, y)
-    
+
     centroids = kmeans.cluster_centers_
     labels = kmeans.labels_
-    
+
     print(centroids)
     print()
     print(labels)
     print()
     print(kmeans)
     print()
-    
+
 
     return
 
@@ -136,7 +136,7 @@ def decisionTreeRegression(x_Train, y_Train, x_Valid, y_Valid, dfTrain, dfValid)
     This function performs a supervised learning classification analysis using
     a decision tree regressor. It also prints applicable metrics
     '''
-    
+
     #x and y parameters for fitting and prediction
     xT = dfTrain[x_Train]
     yT = dfTrain["Gene_length"]
@@ -193,26 +193,26 @@ def decisionTreeRegression(x_Train, y_Train, x_Valid, y_Valid, dfTrain, dfValid)
     print(r2Score)
     print()
 
-    
-    
+
+
     # Genrate stats summary (linear regression)
     statistics(expected, predicted)
-    
+
     # Generate scatter plot
     plotDTR(expected, predicted)
-    
+
     return
 
 def statistics(expected,predicted):
     '''
-    This method runs a linear regression (OLS: least squared) on the 
+    This method runs a linear regression (OLS: least squared) on the
     predicted (Y) vs true (X) gene lengths.
     '''
-    
+
     results = sm.OLS(predicted, sm.add_constant(expected)).fit()
-    
+
     print(results.summary())
-    
+
     return
 
 def plotDTR(expected, predicted):
@@ -221,17 +221,17 @@ def plotDTR(expected, predicted):
     '''
     plt.figure()
     plt.scatter(expected,predicted, c= "darkorange", label = "Gene Length"  )
-    
+
     #Add line of best fit
     plt.plot(np.unique(expected), np.poly1d(np.polyfit(expected, predicted, 1))(np.unique(expected)))
-    
-    
+
+
     plt.xlabel("Truth")
     plt.ylabel("Prediction")
     plt.title("Decision Tree Regression")
     plt.legend()
-    
-    plt.savefig('DTR_scatter.png')
+
+    plt.savefig('images/DTR_scatter.png')
 
     return
 '''
