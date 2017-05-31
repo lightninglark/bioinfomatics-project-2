@@ -45,125 +45,106 @@ def main():
 
 #     modTrainData = modDataSet(tData)
 #     modvData = modDataSet(vData)
-    
+
     x_Train = getFeaturesList(tData)
     x_Valid = getFeaturesList(vData)
-    
+
     y_Train = getTargetsList(tData)
     y_Valid = getTargetsList(vData)
-    
+
     analyzeData(x_Train, y_Train, x_Valid, y_Valid, tData, vData)
-    
-    
+
+
     #learningCode()  #  Example code, basic regression and classification
-    
-    
+
+
     #initDataSets()
 
 
     return
 
 def visualizeData(df):
-    
+
     return
 
 def getFeaturesList(df):
-    
+
     return list(df.columns[1:10])
 
 def getTargetsList(df):
-    
+
     return df['Gene_length'].unique()
 
 def analyzeData(x_Train, y_Train, x_Valid, y_Valid, dfTrain, dfValid):
-    
+
     #x and y parameters for fitting and prediction
     xT = dfTrain[x_Train]
     yT = dfTrain["Gene_length"]
-    
+
     xV = dfValid[x_Valid]
     yV = dfValid["Gene_length"]
-    
- 
-    
+
+
+
     # Classifcation model
     model = DecisionTreeRegressor()
-    
+
     # Train model with training data set
     model.fit(xT,yT)
-    
+
     print(model)
     print()
-    
+
     # expected (actual gene lengths)
     expected = yV
     # predict gene lengths based on features of valid set
     predicted = model.predict(xV)
-    
+
     #Explained Variance Score
-    
+
     expVariScore = metrics.explained_variance_score(expected, predicted)
-    
+
     print('Explained Variance Score')
     print(expVariScore)
     print()
-    
+
     #mean absolute error
-    
+
     mAbsError = metrics.mean_absolute_error(expected, predicted)
     print('Mean Absolute Error')
     print(mAbsError)
     print()
-    
+
     #mean squared error
     mSqrError = metrics.mean_squared_error(expected, predicted)
     print('Mean Squared Error')
     print(mSqrError)
     print()
-    
+
     #median_absolute_erro
     medAbsError = metrics.median_absolute_error(expected, predicted)
     print('Median Absolute Error')
     print(medAbsError)
     print()
-    
+
     #r2 score
     r2Score = metrics.r2_score(expected, predicted)
     print('r2 Score')
     print(r2Score)
     print()
 
-
-    #plot regression
-    plotDTR(model)
-    
-#     cr = metrics.classification_report(expected, predicted)
-#     print(cr)
-#     
-#     #print confusion matrix
-#     cm = metrics.confusion_matrix(predicted, expected)
-#     print(cm)
-#     
-#     
-#     # convert gene lengths from ints to strings
-#     labels = y_Valid
-#     strLabels = []
-#     
-#     for n in range(0, len(labels)):
-#         tempStr = str(labels[n])
-#         strLabels.append(tempStr)
-#     
-#     
-#     #Plot confusion matrix
-#     plotCM(cm, strLabels) #  Plot the confusion matrix as a heat map
-
+    plotDTR(expected, predicted)
     return
-    
 
-def plotDTR(model):
-    
-    #implement plot
-    
+
+def plotDTR(expected, predicted):
+    plt.figure()
+    plt.plot(expected, predicted, color="red")
+    plt.xlabel("Truth")
+    plt.ylabel("Prediction")
+    plt.title("Decision Tree Regression")
+    plt.show()
+
     return
 
 def learningCode():
@@ -185,7 +166,7 @@ def learningCode():
     respective label(target), and in this data set, there is a list with 4
     measurements: Sepal length, Sepal width, Petal length, and Petal width.
     """
-    
+
     dataset = datasets.load_iris()
 
     model = DecisionTreeClassifier()        #  Create new DTC object
@@ -197,10 +178,10 @@ def learningCode():
     """
     y = dataset.target
     x = dataset.data
-    
+
     #model.fit(dataset.data, dataset.target)
     model.fit(x,y)
-    
+
     #  http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier
     #  To assist in reading the DTC output
     print(model)
