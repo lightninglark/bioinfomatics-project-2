@@ -20,7 +20,6 @@ Assumptions and Implementation Notes:
 
 
 @authors: Jayse Farrel, Jessica Kunder, Ryan Palm
-            -Credit to Kevin Palm for cluster analysis code
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 __author__ = "Jayse Farrel, Jessica Kunder, Ryan Palm"
@@ -63,10 +62,10 @@ def main():
     visualizeData(fData)
 
     #Run our DTR analysis, generate scatter plot (predicted, expected) (x,y)
-    decisionTreeRegression(x_Train, y_Train, x_Valid, y_Valid, tData, vData)
+    #decisionTreeRegression(x_Train, y_Train, x_Valid, y_Valid, tData, vData)
 
     #Have not been able to plot yet
-    clusterAnalysis(fData)
+    cluster_analysis_example(fData)
 
     return
 
@@ -105,10 +104,35 @@ def getTargetsList(df):
     return df['Gene_length'].unique()
 
 def clusterAnalysis(df):
-    '''
-    @author: Kevin Palm
-    This function preforms a principle components clustering analysis.
-    '''
+
+
+
+    x_Features = getFeaturesList(df)
+    y_GeneLength =  getTargetsList(df)
+
+    y = df['Gene_length']
+    y.values.reshape(-1,1)
+
+    X = df[x_Features]
+
+    kmeans = cluster.KMeans(n_clusters=7)
+    kmeans.fit(X, y)
+
+    centroids = kmeans.cluster_centers_
+    labels = kmeans.labels_
+
+    print(centroids)
+    print()
+    print(labels)
+    print()
+    print(kmeans)
+    print()
+
+
+    return
+
+def cluster_analysis_example(df):
+
     from sklearn.decomposition import PCA
     import matplotlib.cm as cm
 
@@ -177,8 +201,6 @@ def clusterAnalysis(df):
     centers.index = "Cluster " + centers.index.astype(str) # Better index
     print(centers)
 
-
-    return
 
 def decisionTreeRegression(x_Train, y_Train, x_Valid, y_Valid, dfTrain, dfValid):
     '''
