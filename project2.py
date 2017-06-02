@@ -275,8 +275,8 @@ def plotDTR(expected, predicted):
     plt.plot(np.unique(expected), np.poly1d(np.polyfit(expected, predicted, 1))(np.unique(expected)))
 
 
-    plt.xlabel("Truth")
-    plt.ylabel("Prediction")
+    plt.xlabel("Actual Gene Length (Nucleotide Base Pairs)")
+    plt.ylabel("Predicted Gene Length (Nucleotide Base Pairs)")
     plt.title("Decision Tree Regression")
     plt.legend()
 
