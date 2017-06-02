@@ -1,21 +1,21 @@
 ,Species,Monogamous,Polygynous,Polyandrous,Promiscuous,Solitary,Small_units,Communal,Parental_investment,Caste_system,Gene_length
-0,Homo_sapiens,1,0.3,0.1,1,0,1,1,1,1,3824
-1,Canis_familiaris,0,0,0,1,0,1,1,1,1,3842
-2,Felis_catus,0,0,0,1,1,0.3,0,1,0,3811
-3,Bos_taurus,0,1,0,0,0,1,1,1,1,2844
-4,Equus_caballus,0,1,0,0,0,1,1,1,1,3833
+0,Homo_sapiens,0.4,0.2,0.1,0.3,0,0.5,0.5,1,1,3824
+1,Canis_familiaris,0,0,0,1,0,0.5,0.5,1,1,3842
+2,Felis_catus,0,0,0,1,0.8,0.2,0,1,0,3811
+3,Bos_taurus,0,1,0,0,0,0.5,0.5,1,1,2844
+4,Equus_caballus,0,1,0,0,0,0.5,0.5,1,1,3833
 5,Monodelphis_domestica,0,0,0,1,1,0,0,1,0,3814
 6,Taeniopygia_guttata,1,0,0,0,0,0,1,1,1,2951
 7,Falco_peregrinus,1,0,0,0,1,0,0,1,1,2280
-8,Alligator_mississippiensis,0,1,0,0,0,0.5,1,1,1,1744
+8,Alligator_mississippiensis,0,1,0,0,0,0.5,0.5,1,1,1744
 9,Anolis_carolinensis,0,1,0,0,1,0,0,0,0,2155
-10,Serinus_canaria,1,0,0,0,0,1,0.5,1,1,2803
+10,Serinus_canaria,1,0,0,0,0,0.5,0.5,1,1,2803
 11,Pteropus_vampyrus,0,1,0,0,0,0,1,1,1,3875
-12,Haliaeetus_leucocephalus,1,0,0,0,1,0.2,0.4,1,0,1601
-13,Nestor_notabilis,0,1,0,0,0,1,0.5,1,1,1815
-14,Microcebus murinus,0,1,0,0,1,1,0,1,1,3842
+12,Haliaeetus_leucocephalus,1,0,0,0,0.4,0.2,0.4,1,0,1601
+13,Nestor_notabilis,0,1,0,0,0,0.5,0.5,1,1,1815
+14,Microcebus murinus,0,1,0,0,0.5,0.5,0,1,1,3842
 15,Jaculus jaculus,0,1,0,0,1,0,0,1,0,3130
 16,Octodon degus,0,1,0,0,0,1,0,1,0,3066
-17,Pongo abelii,0,0,0,1,1,0.5,0,1,0,4344
+17,Pongo abelii,0,0,0,1,0.5,0.5,0,1,0,4344
 18,Camelus dromedarius,0,1,0,0,0,0,1,1,1,3311
 19,Eptesicus fuscus,0,1,0,0,0,0,1,1,1,3049
