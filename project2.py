@@ -45,9 +45,9 @@ import numpy as np
 def main():
     """ Main Function to control program flow
     """
-    tData = pd.read_csv('training_data.csv', index_col = 0)  # Training data
-    vData = pd.read_csv('validation_data.csv', index_col = 0)# Validation data
-    fData = pd.read_csv('full_data.csv', index_col = 0)      # Full data
+    tData = pd.read_csv('./input/training_data.csv', index_col = 0)  # Training data
+    vData = pd.read_csv('./input/validation_data.csv', index_col = 0)# Validation data
+    fData = pd.read_csv('./input/full_data.csv', index_col = 0)      # Full data
 
     # Grab features list and gene lengths for use in analysis/plots
     x_Full = getFeaturesList(fData)
